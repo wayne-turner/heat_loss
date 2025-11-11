@@ -2,6 +2,21 @@
 Designed as an educational toolkit for calculating and analyzing heat loss in buildings. Capable of estimating heat loss and associated costs, this project caters to a wide audience including homeowners, builders, and energy analysts. While it provides tools for practical analysis, it is also crafted with educators, students, and DIY enthusiasts in mind, offering a solid starting point for learning and experimentation in the field of thermal dynamics and building design.
 
 
+## Project structure
+
+```text
+heat_loss/
+├── README.md 
+├── requirements.txt
+├── heat_loss_simulation.py  # core model
+├── cli.py                   # command line entrypoint
+├── visualizations.py        # plot helpers
+└── notebooks/
+    └── heat_loss_labs.ipynb # educational labs
+
+````
+
+
 ## Motivation
 The project was born out of a need to tackle high winter energy costs in a historic home, I sought to quantify the ROI of various energy-saving upgrades. This toolkit empowers users to make informed decisions about improving their homes' thermal efficiency, blending practical solutions with educational resources to address energy loss in any building.
 
@@ -195,17 +210,20 @@ Infiltration uses a common teaching approximation:
 ## Lesson Ideas and Classroom Activities
 These are examples that line up with the included notebooks.
 
-### 1. intro heat loss lab (`01_intro_heat_loss.ipynb`)
+All three labs below are bundled in a single notebook:
+- `notebooks/heat_loss_labs.ipynb`
+
+### 1. intro heat loss lab
 * Fix a base house and vary:
   * `ambient_temp_F`
   * `insulation_r_value`
   * `window_type`
 * Have students:
-  * Plot `Q_total_kWh` vs ambient temperature.
+  * Plot or tabulate `Q_total_kWh` vs ambient temperature.
   * Identify which change (insulation, windows, or temperature setpoint) has the largest effect.
   * Explain results using the conduction and window equations.
 
-### 2. scenario comparison lab (`02_scenario_comparisons.ipynb`)
+### 2. scenario comparison lab
 * Use `heat_loss_scenarios` to generate many combinations.
 * Suggested questions:
   * “Which three scenarios minimize `Q_total_kWh`?”
@@ -215,7 +233,7 @@ These are examples that line up with the included notebooks.
   * Rank scenarios by `Q_total_kWh` and `total_cost`.
   * Present a “recommended package” for a homeowner with a simple justification.
 
-### 3. design tradeoffs lab (`03_design_tradeoffs.ipynb`)
+### 3. design tradeoffs lab
 * Start from a base case and sweep:
   * insulation bands
   * window type
@@ -225,10 +243,3 @@ These are examples that line up with the included notebooks.
   * “If you can only change one thing, what should it be and why?”
   * “At what point do higher R-values show diminishing returns?”
   * “How does infiltration compare to window losses for a leaky vs tight home?”
-
-### 4. back-of-the-envelope checks
-* Ask students to derive approximate expected changes using the equations:
-  * Example: “If ΔT doubles, what should happen to `Q_total_kWh`?”
-  * Compare their prediction to the model output.
-
-These activities are designed so that students can focus on interpreting trends and assumptions rather than implementation details, while still having direct access to the underlying equations if needed.

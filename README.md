@@ -18,7 +18,9 @@ heat_loss/
 
 
 ## Motivation
-The project was born out of a need to tackle high winter energy costs in a historic home, I sought to quantify the ROI of various energy-saving upgrades. This toolkit empowers users to make informed decisions about improving their homes' thermal efficiency, blending practical solutions with educational resources to address energy loss in any building.
+The project was born out of a need to tackle winter energy costs, seeking to quantify the ROI of various energy-saving upgrades. This toolkit empowers users to make informed decisions about improving their homes' thermal efficiency, blending practical solutions with educational resources to address energy loss in any building.
+
+<img src="notebooks/house.jpg"/>
 
 ## Applications
 - **Energy Audits**: Evaluate building performance and identify opportunities for insulation upgrades.

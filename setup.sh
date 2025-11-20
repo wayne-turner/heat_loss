@@ -33,3 +33,8 @@ else
 fi
 
 echo "setup complete"
+
+# keep terminal open if interactive
+if [ -t 0 ]; then
+  read -rp "press Enter to close"
+fi
